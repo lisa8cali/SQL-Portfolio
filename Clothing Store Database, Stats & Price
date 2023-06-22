@@ -1,0 +1,44 @@
+CREATE TABLE store_item (id integer primary key, item text, quantity integer, aisle integer, price integer);
+
+/**Store Item:
+Skirts (5,2,$10.49)
+Headbands (7,1,$3.99)
+Tanktop (8,2,$12.69)
+Shoes (10,3,$25.89)
+Socks (12,3, $2.03);
+**/
+
+INSERT INTO store_item VALUES (5,"socks",12,3,2.03);
+
+CREATE TABLE store_item_2 (id integer primary key, item text,quantity integer, aisle integer, price integer);
+
+INSERT INTO store_item_2 VALUES (3,"shoes",10,3, 25.89);
+
+CREATE TABLE store_item_3 (id integer primary key,item text,quantity integer,aisle integer, price integer);
+
+INSERT INTO store_item_3 VALUES (4,"tanktop",8,2,12.69);
+
+CREATE TABLE store_item_4 (id integer primary key,item text,quantity integer,aisle integer, price integer);
+
+INSERT INTO store_item_4 VALUES (1,"skirts",5,2,10.49);
+
+CREATE TABLE store_item_5 (id integer primary key,item text,quantity integer,aisle integer, price integer);
+
+INSERT INTO store_item_5 VALUES (2,"headbands",7,1,3.99);
+
+CREATE TABLE clothes_store_items (id integer primary key,item text,quantity integer,aisle integer, price integer);
+
+INSERT INTO clothes_store_items VALUES (2,"headbands",7,1,3.99);
+INSERT INTO clothes_store_items VALUES (1,"skirts",5,2,10.49);
+INSERT INTO clothes_store_items VALUES (4,"tanktop",8,2,12.69);
+INSERT INTO clothes_store_items VALUES (3,"shoes",10,3,25.89);
+INSERT INTO clothes_store_items VALUES (5,"socks",12,3,2.03);
+
+
+SELECT * FROM store_item;
+SELECT * FROM store_item_2;
+SELECT * FROM store_item_3;
+SELECT * FROM store_item_4;
+SELECT * FROM store_item_5;
+SELECT * FROM clothes_store_items;
+SELECT item,aisle,price FROM clothes_store_items ORDER BY price;
