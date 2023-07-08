@@ -1,0 +1,88 @@
+
+
+CREATE TABLE famous_people (
+id INTEGER PRIMARY KEY,
+    name TEXT,
+    profession INTEGER);
+
+INSERT INTO famous_people (name,profession) VALUES ("selena gomez", "singer");
+INSERT INTO famous_people (name,profession)
+VALUES ("taylor swift", "singer");
+INSERT INTO famous_people (name,profession)
+VALUES ("Tahereh Mafi","author");
+INSERT INTO famous_people (name,profession)
+VALUES ("tessa bailey","author");
+INSERT INTO famous_people (name,profession)
+VALUES ("ciara","singer");
+INSERT INTO famous_people (name,profession)
+VALUES ("chadwick boseman","actor");
+INSERT INTO famous_people (name,profession)
+VALUES ("tom holland","actor");
+INSERT INTO famous_people (name,profession)
+VALUES ("zendaya","actor");
+INSERT INTO famous_people (name,profession)
+VALUES ("justin bieber","singer");
+INSERT INTO famous_people (name,profession)
+VALUES ("mia sheridan","author");
+INSERT INTO famous_people (name,profession)
+VALUES ("harper lee","author");
+INSERT INTO famous_people (name,profession)
+VALUES ("maya angelou","author");
+INSERT INTO famous_people (name,profession)
+VALUES ("dr seuss","author");
+INSERT INTO famous_people (name,profession)
+VALUES ("Ed Sheeran","singer");
+INSERT INTO famous_people (name,profession)
+VALUES ("adele","singer");
+INSERT INTO famous_people (name,profession)
+VALUES ("alicia keys","singer");
+INSERT INTO famous_people (name,profession)
+VALUES ("chris evans","actor");
+INSERT INTO famous_people (name,profession)
+VALUES ("margot robbie","actor");
+INSERT INTO famous_people (name,profession)
+VALUES ("brad pitt","actor");
+INSERT INTO famous_people (name,profession)
+VALUES ("denzel washington","actor");
+INSERT INTO famous_people (name,profession)
+VALUES ("halle berry","actor");
+INSERT INTO famous_people (name,profession)
+VALUES ("jessica chastain","actor");
+INSERT INTO famous_people (name,profession)
+VALUES ("gal gadot","actor");
+
+CREATE TABLE movies (
+ person_id INTEGER,
+ movie_id TEXT UNIQUE,
+ year_id INTEGER );
+
+    
+INSERT INTO movies (person_id,movie_id,year_id) VALUES ("6", "The Black Panther", "2018");
+INSERT INTO movies (person_id,movie_id,year_id) VALUES ("7", "uncharted", "2022");
+INSERT INTO movies (person_id,movie_id,year_id) VALUES ("8", "Dune", "2021");
+INSERT INTO movies (person_id,movie_id,year_id) VALUES ("17","the grey man","2022");
+INSERT INTO movies (person_id,movie_id,year_id) VALUES ("18","barbie","2023");
+INSERT INTO movies (person_id,movie_id,year_id) VALUES ("19","Oceans 11","2001");
+INSERT INTO movies (person_id,movie_id,year_id) VALUES ("20","malcolm x","1992"); 
+INSERT INTO movies (person_id,movie_id,year_id) VALUES ("21","catwoman","2004"); 
+INSERT INTO movies (person_id,movie_id,year_id) VALUES ("22","the help","2011");
+INSERT INTO movies (person_id,movie_id,year_id) VALUES ("23", "wonder woman", "2017");
+
+    
+CREATE TABLE songs (
+ person_id INTEGER,
+ song_id TEXT UNIQUE,
+ year_id INTEGER);
+ 
+
+INSERT INTO songs (person_id,song_id,year_id) VALUES ("selena gomez","look at her now","2020");
+INSERT INTO songs (person_id,song_id,year_id) VALUES ("taylor swift","blank space","2014");
+INSERT INTO songs (person_id,song_id,year_id) VALUES ("justin bieber","sorry","2015");
+INSERT INTO songs (person_id,song_id,year_id) VALUES ("ed sheeran","shape of you","2017");
+INSERT INTO songs (person_id,song_id,year_id) VALUES ("adele","Hello","2015");
+INSERT INTO songs (person_id,song_id,year_id) VALUES ("alicia keys","girl on fire","2012");
+
+
+SELECT famous_people.name, movies.movie_id, movies.year_id
+FROM famous_people
+JOIN movies ON famous_people.id = movies.person_id;
